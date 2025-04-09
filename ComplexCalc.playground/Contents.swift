@@ -41,8 +41,16 @@ class Calculator {
         return sum
     }
     
+    func add(lhs l : (Int, Int), rhs r : (Int, Int)) -> (Int, Int) {
+        return (l.0 + r.0, l.1 + r.1)
+    }
+    
     func subtract(lhs l : Int, rhs r : Int) -> Int {
         return l - r
+    }
+    
+    func subtract(lhs l : (Int, Int), rhs r : (Int, Int)) -> (Int, Int) {
+        return (l.0 - r.0, l.1 - r.1)
     }
     
     func multiply(lhs l : Int, rhs r : Int) -> Int {
