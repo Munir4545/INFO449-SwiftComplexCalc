@@ -33,6 +33,14 @@ class Calculator {
         return l + r
     }
     
+    func add(_ nums: [Int]) -> Int {
+        var sum = 0
+        for num in nums {
+            sum += num
+        }
+        return sum
+    }
+    
     func subtract(lhs l : Int, rhs r : Int) -> Int {
         return l - r
     }
@@ -41,13 +49,31 @@ class Calculator {
         return l * r
     }
     
+    func multiply(_ nums: [Int]) -> Int {
+        var sum = 1
+        for num in nums {
+            sum *= num
+        }
+        return sum
+    }
+    
     func divide(lhs l : Int, rhs r : Int) -> Int {
         return l / r
     }
     
+    
     func mathOp(lhs l : Int, rhs r : Int, op : (Int, Int) -> Int) -> Int {
         return op(l, r)
     }
+    
+    func count(_ nums : [Int]) -> Int {
+        return nums.count
+    }
+    
+    func avg(_ nums : [Int]) -> Int {
+        return self.add(nums) / self.count(nums)
+    }
+    
 }
 
 //: Don't change the name of this object (`calc`); it's used in all the tests.
