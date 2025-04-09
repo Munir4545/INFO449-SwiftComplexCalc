@@ -45,12 +45,24 @@ class Calculator {
         return (l.0 + r.0, l.1 + r.1)
     }
     
+    func add(lhs l : [String : Int], rhs r : [String : Int]) -> [String : Int] {
+        let xPoint = l["x"]! + r["x"]!
+        let yPoint = l["y"]! + r["y"]!
+        return ["x" : xPoint, "y" : yPoint]
+    }
+    
     func subtract(lhs l : Int, rhs r : Int) -> Int {
         return l - r
     }
     
     func subtract(lhs l : (Int, Int), rhs r : (Int, Int)) -> (Int, Int) {
         return (l.0 - r.0, l.1 - r.1)
+    }
+    
+    func subtract(lhs l : [String : Int], rhs r : [String : Int]) -> [String : Int] {
+        let xPoint = l["x"]! - r["x"]!
+        let yPoint = l["y"]! - r["y"]!
+        return ["x" : xPoint, "y" : yPoint]
     }
     
     func multiply(lhs l : Int, rhs r : Int) -> Int {
