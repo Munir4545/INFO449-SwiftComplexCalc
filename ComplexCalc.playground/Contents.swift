@@ -29,20 +29,24 @@ print("Welcome back to the UW Calculator")
 //:
 class Calculator {
     
-    func add(lhs l: Int, rhs r: Int) -> Int {
+    func add(lhs l : Int, rhs r : Int) -> Int {
         return l + r
     }
     
-    func subtract(lhs l: Int, rhs r: Int) -> Int {
+    func subtract(lhs l : Int, rhs r : Int) -> Int {
         return l - r
     }
     
-    func multiply(lhs l: Int, rhs r: Int) -> Int {
+    func multiply(lhs l : Int, rhs r : Int) -> Int {
         return l * r
     }
     
-    func divide(lhs l: Int, rhs r: Int) -> Int {
+    func divide(lhs l : Int, rhs r : Int) -> Int {
         return l / r
+    }
+    
+    func mathOp(lhs l : Int, rhs r : Int, op : (Int, Int) -> Int) -> Int {
+        return op(l, r)
     }
 }
 
